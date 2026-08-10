@@ -185,6 +185,10 @@
   #sideous-pad .btn{border-color:var(--purple);}
   #sideous-pad .btn:hover{background:rgba(185,140,255,0.1);}
 
+  #sideous-bass .plugin-name, #sideous-bass ul.features li::before{color:var(--green);}
+  #sideous-bass .btn{border-color:var(--green);}
+  #sideous-bass .btn:hover{background:rgba(111,227,163,0.1);}
+
   footer{
     padding:48px 0 72px;
     text-align:center;
@@ -208,7 +212,8 @@
       <a href="#sideous">Sideous</a>·
       <a href="#sideous-drums">Drums</a>·
       <a href="#sideous-noise">Noise</a>·
-      <a href="#sideous-pad">Pad</a>
+      <a href="#sideous-pad">Pad</a>·
+      <a href="#sideous-bass">Bass</a>
     </p>
 
     <div class="disclaimer">
@@ -229,6 +234,7 @@
   <a href="#sideous-drums">Sideous Drums</a>
   <a href="#sideous-noise">Sideous Noise</a>
   <a href="#sideous-pad">Sideous Pad</a>
+  <a href="#sideous-bass">Sideous Bass</a>
 </nav>
 
 <main class="wrap">
@@ -331,11 +337,37 @@
     </div>
   </section>
 
+  <section class="plugin" id="sideous-bass">
+    <div class="plugin-head">
+      <h2 class="plugin-name">Sideous Bass</h2>
+      <span class="plugin-sub">8-bit bass specialist</span>
+    </div>
+    <p class="plugin-desc">
+      A bass specialist, own gunmetal/industrial visual identity. Built
+      around the specific 8-bit synthesis tricks that make retro
+      Atari/C64-style bass buzz and clang — ring mod, oscillator sync, and a
+      SID-style bit-ANDed "combined waveform" — plus a fully patchable
+      modulation matrix instead of fixed LFO routing.
+    </p>
+    <img class="shot" src="images/sideous-bass.png" alt="Sideous Bass plugin UI screenshot">
+    <ul class="features">
+      <li>Switchable Engine: Ring mod, hard sync, or SID-style bit-ANDed "Combined" waveform with a Grit knob for bitcrushed crunch</li>
+      <li>Patch Bay: a 6×7 mod matrix (2 LFOs, 3 envelopes, mod wheel → pitch, cutoff, ratio, grit, ring mix, PW, amplitude) with live animated patch cables</li>
+      <li>Same filter toolkit as the rest of the family (12/24dB LP/HP + Moog-style ladder), self-resonant growl pairs with all three engines</li>
+      <li>Three envelopes (Amp, Filter, Engine) and two LFOs, all just Patch Bay sources — nothing is hardwired except Amp Env → VCA</li>
+      <li>Mono-with-portamento by default, or 8-voice poly for stacked bass; Legato/Always glide control</li>
+      <li>Built-in file-based preset browser in the plugin UI itself, works even in the JACK standalone with no host browser</li>
+    </ul>
+    <div class="plugin-actions">
+      <a class="btn" href="https://github.com/marcin-koziol/Sideous-bass">↗ github.com/marcin-koziol/Sideous-bass</a>
+    </div>
+  </section>
+
 </main>
 
 <footer>
   <div class="wrap">
-    <p>All four plugins are built on <a href="https://github.com/DISTRHO/DPF">DPF</a>,
+    <p>All five plugins are built on <a href="https://github.com/DISTRHO/DPF">DPF</a>,
     ship as VST3 / LV2 / CLAP / JACK standalone, and build for Linux, Windows,
     and macOS via GitHub Actions on every push.</p>
     <p>This page itself was also written by Claude Code.</p>
