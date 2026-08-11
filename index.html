@@ -189,6 +189,10 @@
   #sideous-bass .btn{border-color:var(--green);}
   #sideous-bass .btn:hover{background:rgba(111,227,163,0.1);}
 
+  #sideous-umbra .plugin-name, #sideous-umbra ul.features li::before{color:var(--magenta);}
+  #sideous-umbra .btn{border-color:var(--magenta);}
+  #sideous-umbra .btn:hover{background:rgba(255,77,184,0.1);}
+
   footer{
     padding:48px 0 72px;
     text-align:center;
@@ -213,7 +217,8 @@
       <a href="#sideous-drums">Drums</a>·
       <a href="#sideous-noise">Noise</a>·
       <a href="#sideous-pad">Pad</a>·
-      <a href="#sideous-bass">Bass</a>
+      <a href="#sideous-bass">Bass</a>·
+      <a href="#sideous-umbra">Umbra</a>
     </p>
 
     <div class="disclaimer">
@@ -235,6 +240,7 @@
   <a href="#sideous-noise">Sideous Noise</a>
   <a href="#sideous-pad">Sideous Pad</a>
   <a href="#sideous-bass">Sideous Bass</a>
+  <a href="#sideous-umbra">Sideous Umbra</a>
 </nav>
 
 <main class="wrap">
@@ -367,11 +373,38 @@
     </div>
   </section>
 
+  <section class="plugin" id="sideous-umbra">
+    <div class="plugin-head">
+      <h2 class="plugin-name">Sideous Umbra</h2>
+      <span class="plugin-sub">vowel-morphing cat synth</span>
+    </div>
+    <p class="plugin-desc">
+      A small, silly, genuinely playable cat-meow synth — the small/joke
+      plugin in the family, deliberately kept tiny: 16 parameters, no preset
+      browser, no mod matrix. A PolyBLEP sawtooth "vocal fold," crossfaded
+      with noise for rasp, drives three formant filters swept by a single
+      Vowel knob (ah→eh→ee→oh→oo) — the same trick real vocal tracts and cat
+      meows use to get their color.
+    </p>
+    <img class="shot" src="images/sideous-umbra.png" alt="Sideous Umbra plugin UI screenshot">
+    <ul class="features">
+      <li>Saw/noise "vocal fold" source through three parallel bandpass formant filters interpolated across a 5-point vowel table</li>
+      <li>Vowel knob morphs the whole timbre continuously from "ah" to "oo," with shared Resonance and Drive across F1/F2/F3</li>
+      <li>Dedicated two-stage Swoop pitch envelope per note-on (independent of the amp envelope) for the classic upward "mrreow," or negative amounts for a downward whine</li>
+      <li>Sine vibrato stacks on top of Swoop so every note gets its own little pitch performance</li>
+      <li>Analog-style shapeable amp envelope with velocity sensitivity, plus a tanh-crossfade Master Drive for character rather than just limiting</li>
+      <li>8-voice polyphony (smaller than the 16-voice siblings on purpose), mascot cat rendered as a rainbow-gradient silhouette</li>
+    </ul>
+    <div class="plugin-actions">
+      <a class="btn" href="https://github.com/marcin-koziol/Sideous-umbra">↗ github.com/marcin-koziol/Sideous-umbra</a>
+    </div>
+  </section>
+
 </main>
 
 <footer>
   <div class="wrap">
-    <p>All five plugins are built on <a href="https://github.com/DISTRHO/DPF">DPF</a>,
+    <p>All six plugins are built on <a href="https://github.com/DISTRHO/DPF">DPF</a>,
     ship as VST3 / LV2 / CLAP / JACK standalone, and build for Linux, Windows,
     and macOS via GitHub Actions on every push.</p>
     <p>This page itself was also written by Claude Code.</p>
