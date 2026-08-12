@@ -284,8 +284,12 @@
     <ul class="features">
       <li>Fixed 12-voice kit (kick, snare, hats, 3 toms, crash, ride, rimshot, clap, maracas), GM-ish MIDI map</li>
       <li>Kick/toms use a pitch-envelope "sweep" trick; snare layers pitched tone over independently-decaying noise</li>
-      <li>6-oscillator FM metallic stack for hats/crash/ride, blendable against filtered noise via a Metal knob</li>
+      <li>6-oscillator FM metallic stack for hats/crash/ride, with Metal blend and a Tune knob that transposes the whole partial set like a real analog cymbal "tune" pot</li>
+      <li>Ride adds a tighter, more harmonic partial cluster plus a dedicated pitched Bell "ping" layer so it's not just Crash with a longer decay</li>
+      <li>Maracas is a resonant-bandpass multi-grain "rattle" (Rattle knob) instead of a plain noise burst — reads as a shaker, not another hi-hat</li>
       <li>Closed/open hi-hat choke group, classic 3-burst "flam" handclap</li>
+      <li>Click-to-audition trigger pads and live per-voice LED meters built into each column header — hear a sound change without touching a MIDI keyboard</li>
+      <li>Host-visible note names: Ardour reads them automatically via LV2 MIDNAM, VST3 hosts via IUnitInfo pitch names</li>
       <li>Two builds: single stereo mix, or a 13-bus multi-out version for per-drum routing/sends</li>
       <li>Master Drive/Mix stage as a character control, not just a limiter</li>
       <li>Built-in file-based preset browser with 10 factory presets (808/909, Trap, Lo-Fi Chip, Industrial, and more), works in every format including the JACK standalone</li>
