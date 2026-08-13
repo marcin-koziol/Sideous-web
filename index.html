@@ -193,6 +193,21 @@
   #sideous-umbra .btn{border-color:var(--magenta);}
   #sideous-umbra .btn:hover{background:rgba(255,77,184,0.1);}
 
+  .extras-heading{
+    padding:48px 0 8px;
+    text-align:center;
+    color:var(--text-dim);
+    font-size:13px;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    border-top:1px solid var(--border);
+  }
+  .extras-heading span{color:var(--text);}
+
+  #ostinateous .plugin-name, #ostinateous ul.features li::before{color:var(--blue);}
+  #ostinateous .btn{border-color:var(--blue);}
+  #ostinateous .btn:hover{background:rgba(111,168,255,0.1);}
+
   footer{
     padding:48px 0 72px;
     text-align:center;
@@ -218,7 +233,8 @@
       <a href="#sideous-noise">Noise</a>·
       <a href="#sideous-pad">Pad</a>·
       <a href="#sideous-bass">Bass</a>·
-      <a href="#sideous-umbra">Umbra</a>
+      <a href="#sideous-umbra">Umbra</a>·
+      <a href="#ostinateous">Ostinateous</a>
     </p>
 
     <div class="disclaimer">
@@ -241,6 +257,7 @@
   <a href="#sideous-pad">Sideous Pad</a>
   <a href="#sideous-bass">Sideous Bass</a>
   <a href="#sideous-umbra">Sideous Umbra</a>
+  <a href="#ostinateous">Ostinateous</a>
 </nav>
 
 <main class="wrap">
@@ -405,6 +422,34 @@
     </ul>
     <div class="plugin-actions">
       <a class="btn" href="https://github.com/marcin-koziol/Sideous-umbra">↗ github.com/marcin-koziol/Sideous-umbra</a>
+    </div>
+  </section>
+
+  <h2 class="extras-heading">— <span>Additional stuff</span> —</h2>
+
+  <section class="plugin" id="ostinateous">
+    <div class="plugin-head">
+      <h2 class="plugin-name">Ostinateous</h2>
+      <span class="plugin-sub">tempo-synced MIDI drum sequencer</span>
+    </div>
+    <p class="plugin-desc">
+      Not a synth voice like the rest of the family — a piano-roll MIDI
+      pattern sequencer meant to sit in front of one (Sideous Drums or
+      anything else). Zero audio ports, MIDI out only, sample-accurate host
+      tempo sync, and its own light-gray/black/purple/pink look rather than
+      a reskin of its siblings.
+    </p>
+    <img class="shot" src="images/ostinateous.png" alt="Ostinateous plugin UI screenshot">
+    <ul class="features">
+      <li>Click/drag/paint/rubber-band note editing, per-note velocity, Ctrl+click multi-select</li>
+      <li>Per-row Mute/Solo, standard mixer behavior</li>
+      <li>Reads host transport frame position directly for click/stuck-note-free sync across starts, stops, seeks, and tempo changes</li>
+      <li>7 factory genre patterns (Techno, House, Minimal Techno, Trance, Drum & Bass, Dubstep, Hardstyle) plus algorithmic Generate variations</li>
+      <li>Bar-targeted fills (Snare Roll, Kick Fill, Tom Fill, Half-Time, Build-Up) and a saved-pattern library</li>
+      <li>Standard MIDI File export to a configurable folder, defaulting to Ardour's own Clips folder when present</li>
+    </ul>
+    <div class="plugin-actions">
+      <a class="btn" href="https://github.com/marcin-koziol/Ostinateous">↗ github.com/marcin-koziol/Ostinateous</a>
     </div>
   </section>
 
