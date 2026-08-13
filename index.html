@@ -260,7 +260,7 @@
       <li>Saw / pulse (variable width) / triangle oscillator plus a sub-oscillator (±1/±2 octaves)</li>
       <li>Switchable 12/24dB lowpass/highpass filter plus a simplified Moog-style ladder, with resonance and drive</li>
       <li>Dual shapeable ADSR (amp + filter cutoff) with a live curve-graph visualization</li>
-      <li>Tempo-synced LFO (1/1 to 1/64, dotted/triplet) and a 4-pattern arpeggiator</li>
+      <li>Tempo-synced LFO (1/1 to 1/64, dotted/triplet) targeting pitch, filter cutoff, amplitude, or pulse width, and a 4-pattern arpeggiator</li>
       <li>16-voice polyphony, or mono with portamento and legato control</li>
       <li>Knobs show live values while being automated, not just while dragging</li>
       <li>Built-in file-based preset browser (Prev/Next, rename, save/delete) with 11 factory presets, works in every format including the JACK standalone</li>
@@ -284,15 +284,18 @@
     <ul class="features">
       <li>Fixed 12-voice kit (kick, snare, hats, 3 toms, crash, ride, rimshot, clap, maracas), GM-ish MIDI map</li>
       <li>Kick/toms use a pitch-envelope "sweep" trick; snare layers pitched tone over independently-decaying noise</li>
-      <li>6-oscillator FM metallic stack for hats/crash/ride, with Metal blend and a Tune knob that transposes the whole partial set like a real analog cymbal "tune" pot</li>
+      <li>6-oscillator FM metallic stack for hats/crash/ride, ring-modulated in pairs for extra inharmonic density, with Metal blend and a Tune knob that transposes the whole partial set like a real analog cymbal "tune" pot</li>
+      <li>Hats/crash/ride are genuinely stereo (detuned oscillator/filter/noise chains per channel) with a slow always-on shimmer LFO so the decay tail keeps moving instead of sitting on static noise</li>
       <li>Ride adds a tighter, more harmonic partial cluster plus a dedicated pitched Bell "ping" layer so it's not just Crash with a longer decay</li>
+      <li>Attack knob plus a fixed broadband strike-transient "click" on every cymbal hit — a band-limited wash fading in, however fast, still can't fake a real stick strike</li>
+      <li>Clap's Tone sweeps its bandpass center, Hands (1-7) sets how many retriggered pulses make up one hit — 1 is a single clean hit, higher spreads it into more of a "crowd" clap</li>
       <li>Maracas is a resonant-bandpass multi-grain "rattle" (Rattle knob) instead of a plain noise burst — reads as a shaker, not another hi-hat</li>
-      <li>Closed/open hi-hat choke group, classic 3-burst "flam" handclap</li>
+      <li>Closed/open hi-hat choke group</li>
       <li>Click-to-audition trigger pads and live per-voice LED meters built into each column header — hear a sound change without touching a MIDI keyboard</li>
       <li>Host-visible note names: Ardour reads them automatically via LV2 MIDNAM, VST3 hosts via IUnitInfo pitch names</li>
       <li>Two builds: single stereo mix, or a 13-bus multi-out version for per-drum routing/sends</li>
       <li>Master Drive/Mix stage as a character control, not just a limiter</li>
-      <li>Built-in file-based preset browser with 10 factory presets (808/909, Trap, Lo-Fi Chip, Industrial, and more), works in every format including the JACK standalone</li>
+      <li>Built-in file-based preset browser with 10 factory presets (808/909, Trap, Lo-Fi Chip, Industrial, and more), each hand-tuned to carry the newer cymbal/clap/maracas controls too — works in every format including the JACK standalone</li>
     </ul>
     <div class="plugin-actions">
       <a class="btn" href="https://github.com/marcin-koziol/Sideous-drums">↗ github.com/marcin-koziol/Sideous-drums</a>
