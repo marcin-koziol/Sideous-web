@@ -476,17 +476,19 @@
     </div>
     <p class="plugin-desc">
       The first pure-effect plugin in the family — stereo audio in/out, no
-      MIDI. Six stages chained in a fixed order carry the same raw chip
-      character as the rest of the family, with a "broken cassette deck"
-      visual identity instead of a reskin of its instrument siblings.
+      MIDI. Five stages carry the same raw chip character as the rest of
+      the family, drag-reorderable into any sequence you like, with a
+      "broken cassette deck" visual identity instead of a reskin of its
+      instrument siblings.
     </p>
     <img class="shot" src="images/sideous-effects.png" alt="Sideous Effects plugin UI screenshot">
     <ul class="features">
-      <li>Fixed chain: Bitcrusher → Wavefolder → Ring Mod → Lo-fi Filter → Delay → Master Drive/Output</li>
+      <li>Bitcrusher, Wavefolder, Ring Mod, Lo-fi Filter, and Delay can be dragged by their panel header into any processing order — Master (Drive/Output) always runs last</li>
       <li>Every stage has its own Mix knob, all defaulting to 0 — a freshly-loaded instance is a clean pass-through until you dial a stage in</li>
-      <li>Tempo-synced Delay (Free + 16 divisions incl. dotted/triplet) with a "chip-arpeggiated" mode: repeats cycle through a 3-step pitch pattern instead of staying fixed</li>
+      <li>Tempo-synced "chip-arpeggiated" Delay: Steps (2-4 taps), Curve (Pitch/Tempo spacing), Direction (Up/Down/Up-Down), Ping-Pong, Jitter, plus a flat Speed multiplier and a within-grain Ramp</li>
+      <li>Shift+drag/scroll snaps the Delay's Arp and Speed knobs to whole semitone steps</li>
       <li>Ring Mod carrier is switchable Saw/Pulse/Triangle; Lo-fi Filter is a resonant lowpass for dulled, muffled textures</li>
-      <li>Built-in file-based preset browser with 5 factory presets (Telephone Crush, Robot Voice, Arcade Echo, and more), works in every format including the JACK standalone</li>
+      <li>Built-in file-based preset browser with 6 factory presets (Telephone Crush, Arcade Echo, POKEY Quantize, and more), works in every format including the JACK standalone</li>
     </ul>
     <div class="plugin-actions">
       <a class="btn" href="https://github.com/marcin-koziol/Sideous-effects">↗ github.com/marcin-koziol/Sideous-effects</a>
