@@ -19,6 +19,8 @@
     --green: #6fe3a3;
     --purple: #b98cff;
     --blue: #6fa8ff;
+    --lime: #9fe64d;
+    --amber: #d1a35c;
   }
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
@@ -193,6 +195,14 @@
   #sideous-umbra .btn{border-color:var(--magenta);}
   #sideous-umbra .btn:hover{background:rgba(255,77,184,0.1);}
 
+  #sideous-chipdrums .plugin-name, #sideous-chipdrums ul.features li::before{color:var(--lime);}
+  #sideous-chipdrums .btn{border-color:var(--lime);}
+  #sideous-chipdrums .btn:hover{background:rgba(159,230,77,0.1);}
+
+  #sideous-effects .plugin-name, #sideous-effects ul.features li::before{color:var(--amber);}
+  #sideous-effects .btn{border-color:var(--amber);}
+  #sideous-effects .btn:hover{background:rgba(209,163,92,0.1);}
+
   .extras-heading{
     padding:48px 0 8px;
     text-align:center;
@@ -234,6 +244,8 @@
       <a href="#sideous-pad">Pad</a>·
       <a href="#sideous-bass">Bass</a>·
       <a href="#sideous-umbra">Umbra</a>·
+      <a href="#sideous-chipdrums">ChipDrums</a>·
+      <a href="#sideous-effects">Effects</a>·
       <a href="#ostinateous">Ostinateous</a>
     </p>
 
@@ -257,6 +269,8 @@
   <a href="#sideous-pad">Sideous Pad</a>
   <a href="#sideous-bass">Sideous Bass</a>
   <a href="#sideous-umbra">Sideous Umbra</a>
+  <a href="#sideous-chipdrums">Sideous ChipDrums</a>
+  <a href="#sideous-effects">Sideous Effects</a>
   <a href="#ostinateous">Ostinateous</a>
 </nav>
 
@@ -290,12 +304,14 @@
   <section class="plugin" id="sideous-drums">
     <div class="plugin-head">
       <h2 class="plugin-name">Sideous Drums</h2>
-      <span class="plugin-sub">retro 8-bit drum machine</span>
+      <span class="plugin-sub">analog-style drum machine</span>
     </div>
     <p class="plugin-desc">
-      A retro 8-bit-vibe drum synth, companion to Sideous, same visual
-      family with a warmer drum-machine-chassis palette. RD-9-style layout —
-      one column per drum, each with its own knobs and accent color.
+      A retro analog-style drum machine, companion to Sideous, same visual
+      family with a warmer drum-machine-chassis palette. Modeled on classic
+      808/909-style analog drum machines, not an 8-bit/chip sound — that's
+      what Sideous ChipDrums below is for. RD-9-style layout — one column
+      per drum, each with its own knobs and accent color.
     </p>
     <img class="shot" src="images/sideous-drums.png" alt="Sideous Drums plugin UI screenshot">
     <ul class="features">
@@ -425,6 +441,58 @@
     </div>
   </section>
 
+  <section class="plugin" id="sideous-chipdrums">
+    <div class="plugin-head">
+      <h2 class="plugin-name">Sideous ChipDrums</h2>
+      <span class="plugin-sub">raw SID/POKEY-chip drum synth</span>
+    </div>
+    <p class="plugin-desc">
+      The small, primitive sibling to Sideous Drums — deliberately the
+      opposite: 6 voices, 2-6 knobs each, no filters beyond a plain
+      highpass/bandpass, no stereo trickery, just pulse oscillators,
+      one-bit-ish noise, and a ring-mod clang. Green-phosphor CRT terminal
+      look instead of a studio-rack palette.
+    </p>
+    <img class="shot" src="images/sideous-chipdrums.png" alt="Sideous ChipDrums plugin UI screenshot">
+    <ul class="features">
+      <li>Fixed 6-voice kit (kick, snare, closed/open hat, clap, metal), GM-ish MIDI map</li>
+      <li>Kick's pulse oscillator (Wave: Saw/Pulse/Triangle) driven by a fast decay-only pitch envelope, plus a Noise knob to blend in a raw noise layer</li>
+      <li>Snare blends a fixed-pitch pulse buzz with highpassed noise, Grit knob for extra digital crunch</li>
+      <li>Metal is a ring-mod two-oscillator engine straight into an envelope — the raw inharmonic product is the cowbell/percussion-metal sound</li>
+      <li>Click-to-audition trigger pads and live per-voice LED meters built into each column header</li>
+      <li>Host-visible note names via LV2 MIDNAM / VST3 IUnitInfo, same as Sideous Drums</li>
+      <li>Two builds: single stereo mix, or a 7-bus multi-out version for per-voice routing/sends</li>
+      <li>Built-in file-based preset browser with 7 factory presets (SID Basic, POKEY Punch, Arcade Kit, and more), works in every format including the JACK standalone</li>
+    </ul>
+    <div class="plugin-actions">
+      <a class="btn" href="https://github.com/marcin-koziol/Sideous-chipdrums">↗ github.com/marcin-koziol/Sideous-chipdrums</a>
+    </div>
+  </section>
+
+  <section class="plugin" id="sideous-effects">
+    <div class="plugin-head">
+      <h2 class="plugin-name">Sideous Effects</h2>
+      <span class="plugin-sub">chip-vibe effects box</span>
+    </div>
+    <p class="plugin-desc">
+      The first pure-effect plugin in the family — stereo audio in/out, no
+      MIDI. Six stages chained in a fixed order carry the same raw chip
+      character as the rest of the family, with a "broken cassette deck"
+      visual identity instead of a reskin of its instrument siblings.
+    </p>
+    <img class="shot" src="images/sideous-effects.png" alt="Sideous Effects plugin UI screenshot">
+    <ul class="features">
+      <li>Fixed chain: Bitcrusher → Wavefolder → Ring Mod → Lo-fi Filter → Delay → Master Drive/Output</li>
+      <li>Every stage has its own Mix knob, all defaulting to 0 — a freshly-loaded instance is a clean pass-through until you dial a stage in</li>
+      <li>Tempo-synced Delay (Free + 16 divisions incl. dotted/triplet) with a "chip-arpeggiated" mode: repeats cycle through a 3-step pitch pattern instead of staying fixed</li>
+      <li>Ring Mod carrier is switchable Saw/Pulse/Triangle; Lo-fi Filter is a resonant lowpass for dulled, muffled textures</li>
+      <li>Built-in file-based preset browser with 5 factory presets (Telephone Crush, Robot Voice, Arcade Echo, and more), works in every format including the JACK standalone</li>
+    </ul>
+    <div class="plugin-actions">
+      <a class="btn" href="https://github.com/marcin-koziol/Sideous-effects">↗ github.com/marcin-koziol/Sideous-effects</a>
+    </div>
+  </section>
+
   <h2 class="extras-heading">— <span>Additional stuff</span> —</h2>
 
   <section class="plugin" id="ostinateous">
@@ -457,7 +525,7 @@
 
 <footer>
   <div class="wrap">
-    <p>All six plugins are built on <a href="https://github.com/DISTRHO/DPF">DPF</a>,
+    <p>All eight plugins are built on <a href="https://github.com/DISTRHO/DPF">DPF</a>,
     ship as VST3 / LV2 / CLAP / JACK standalone, and build for Linux, Windows,
     and macOS via GitHub Actions on every push.</p>
     <p>This page itself was also written by Claude Code.</p>
