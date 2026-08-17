@@ -448,21 +448,22 @@
     </div>
     <p class="plugin-desc">
       The small, primitive sibling to Sideous Drums — deliberately the
-      opposite: 6 voices, 2-6 knobs each, no filters beyond a plain
-      highpass/bandpass, no stereo trickery, just pulse oscillators,
-      one-bit-ish noise, and a ring-mod clang. Green-phosphor CRT terminal
-      look instead of a studio-rack palette.
+      opposite: 6 voices, no stereo trickery, just pulse oscillators,
+      one-bit-ish noise, and a ring-mod clang. The noisy/metallic voices
+      each carry a resonant filter with its own envelope — the classic
+      chip "pew"/sweep trick. Green-phosphor CRT terminal look instead of
+      a studio-rack palette.
     </p>
     <img class="shot" src="images/sideous-chipdrums.png" alt="Sideous ChipDrums plugin UI screenshot">
     <ul class="features">
       <li>Fixed 6-voice kit (kick, snare, closed/open hat, clap, metal), GM-ish MIDI map</li>
       <li>Kick's pulse oscillator (Wave: Saw/Pulse/Triangle) driven by a fast decay-only pitch envelope, plus a Noise knob to blend in a raw noise layer</li>
-      <li>Snare blends a fixed-pitch pulse buzz with highpassed noise, Grit knob for extra digital crunch</li>
-      <li>Metal is a ring-mod two-oscillator engine straight into an envelope — the raw inharmonic product is the cowbell/percussion-metal sound</li>
+      <li>Snare, Hat Closed/Open, Clap, and Metal each carry a filter envelope (Cutoff, F Env, F Dec, Reso) sweeping the cutoff away from its resting value — Metal gets a filter for the first time, all default to the prior filterless/fixed-cutoff sound</li>
+      <li>Clap is a single noise burst through a resonant bandpass with its own filter envelope — swapped out from a retriggered multi-flam trick that read as too analog/realistic for this primitive kit</li>
       <li>Click-to-audition trigger pads and live per-voice LED meters built into each column header</li>
       <li>Host-visible note names via LV2 MIDNAM / VST3 IUnitInfo, same as Sideous Drums</li>
       <li>Two builds: single stereo mix, or a 7-bus multi-out version for per-voice routing/sends</li>
-      <li>Built-in file-based preset browser with 7 factory presets (SID Basic, POKEY Punch, Arcade Kit, and more), works in every format including the JACK standalone</li>
+      <li>Built-in file-based preset browser with 8 factory presets (SID Basic, POKEY Punch, Zap Kit, and more), works in every format including the JACK standalone</li>
     </ul>
     <div class="plugin-actions">
       <a class="btn" href="https://github.com/marcin-koziol/Sideous-chipdrums">↗ github.com/marcin-koziol/Sideous-chipdrums</a>
